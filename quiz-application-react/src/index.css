@@ -1,0 +1,745 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 64px;
+}
+
+.logo {
+    width: 510px;
+    height: 529px;
+}
+
+.login-container {
+    width: 440px;
+    height: 512px;
+    position: relative;
+}
+
+.login-container>p {
+    color: #8E8E93;
+    margin-top: 10px;
+    margin-bottom: 26px;
+    font-size: 19px;
+}
+
+form label {
+    font-size: 19px;
+}
+
+form input {
+    width: 100%;
+    height: 51px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #8E8E93;
+    padding: 16px;
+    font-size: 19px;
+}
+
+.password {
+    position: relative;
+}
+
+.password .icon {
+    position: absolute;
+    top: 48%;
+    right: 4%;
+    color: #8E8E93;
+    cursor: pointer;
+}
+
+.button {
+    width: 100%;
+    height: 43px;
+    background: #F3BD00;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.button {
+    width: 100%;
+    height: 43px;
+    background: #F3BD00;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+#button {
+    width: 35%;
+    height: 43px;
+    background: #F3BD00;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    margin-left: 32%;
+}
+
+.sign-up-with-google {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px #dedede;
+    border-radius: 8px;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.sign-up-with-google p {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.create-account {
+    display: flex;
+    gap: 4px;
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.create-account p {
+    color: #8E8E93;
+    font-size: 17px;
+}
+
+.create-account a {
+    color: blue;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* login page End here now signup page*/
+
+.signup-container {
+    height: 620px;
+    width: 440px;
+    position: relative;
+}
+
+.signup-container>p {
+    color: #8E8E93;
+    font-size: 19px;
+    margin-top: 6px;
+    margin-bottom: 25px;
+}
+
+.terms-condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 6px;
+}
+
+.terms-condition span {
+    color: blue;
+}
+
+.login-account {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+
+.login-account p {
+    color: #8E8E93;
+    font-size: 17px;
+}
+
+.login-account a {
+    color: blue;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* login page ende here */
+
+/* start quiz here */
+#header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 0px 2px gray;
+    padding: 0px 70px 0px 80px;
+}
+
+#header .user-image {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-image ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.user-image ul li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+main {
+    width: 1300px;
+    height: 780px;
+    margin: 0 auto;
+    padding: 25px 40px
+}
+
+#start-container {
+    position: absolute;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 1110px;
+    height: 550px;
+    padding: 24px;
+    box-shadow: 0px 0px 8px gray;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.blank-display-container {
+    width: 100%;
+    height: 381px;
+    position: relative;
+}
+
+.blank-display {
+    height: 264px;
+    width: 100%;
+    background-color: #C7C7CC;
+    border-radius: 12px;
+    position: relative;
+}
+
+#sms1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#sms2 {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+}
+
+#sms3 {
+    position: absolute;
+    bottom: 25px;
+    right: 300px;
+}
+
+.catchy-lines {
+    width: 100%;
+    text-align: center;
+}
+
+.catchy-lines p {
+    color: #8E8E93;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.catchy-lines h2 {
+    margin: 25px 0px 24px 0px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.time {
+    display: flex;
+    gap: 5px;
+    color: #8E8E93;
+    margin-top: 8px;
+}
+
+.disclaimer li {
+    color: #8E8E93;
+    margin: 8px 0px 8px 24px;
+}
+
+#start-container .button {
+    position: relative;
+    bottom: -70px;
+}
+
+/* end here */
+#question-answer {
+    width: 1265px;
+    height: 530px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#question-number {
+    font-size: 38px;
+    padding-top: 35px;
+}
+
+#progressbar-container {
+    height: 16px;
+    width: 100%;
+    border-radius: 40px;
+    background-color: #EBEBF0;
+    margin: 16px 0px;
+}
+
+#progressbar-container #progress-bar {
+    background-color: #F3BD00;
+    border-radius: 20px;
+    width: 0;
+    height: 16px;
+    transition: width 0.5s;
+}
+
+.question h2 {
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    font-size: 40px;
+}
+
+.answer {
+    padding-left: 39px;
+}
+
+.answer ol li {
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    color: rgb(102, 89, 221);
+    width: fit-content;
+    padding: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#prev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    color: rgb(73, 61, 175);
+    width: 130px;
+    padding: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#next:hover,
+#prev:hover {
+    border: 1.5px solid rgb(80, 80, 165);
+    border-radius: 6px;
+}
+
+/* Leaderboard start from here */
+#leaderboard-body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#leaderboard-main h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#leaderboard-main p {
+    text-align: center;
+}
+
+#leaderboard-main p {
+    color: #8E8E93;
+    font-size: 19px;
+    margin-top: 7px;
+}
+
+.option {
+    width: fit-content;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.option:hover {
+    background-color: #F3BD00;
+}
+
+.selected {
+    background-color: #F3BD00;
+}
+
+#logout-container {
+    height: 150px;
+    width: 250px;
+    box-shadow: 0px 0px 8px gray;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 20px;
+    top: 85px;
+    border-radius: 10px;
+    display: none;
+}
+
+#logout-container #logout-button {
+    width: 50%;
+    padding: 6px;
+    border-radius: 30px;
+    background-color: #F3BD00;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+#logout-container p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#popup {
+    cursor: pointer;
+}
+
+#score-board {
+    position: relative;
+    height: 70vh;
+    /* border: 2px solid greenyellow; */
+}
+
+#first-rank-container {
+    height: 525px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+}
+
+.first-rank {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.first-rank .actual-score {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.actual-score h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.actual-score p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.bg-color {
+    background-color: #F3BD00;
+    height: 380px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.first-rank .circle {
+    height: 150px;
+    width: 150px;
+    border: 7px solid #F3BD00;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 12.5%;
+    transform: translateX(-50%);
+    background-color: rgb(51, 172, 131);
+}
+
+.first-rank .circle img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.first-rank .crown {
+    height: 76px;
+    width: 76px;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-54%);
+}
+
+.username {
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20x;
+}
+
+
+
+#second-rank-container {
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    left: 26%;
+    top: 32%;
+}
+
+.second-rank {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.second-rank .actual-score2 {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.actual-score2 p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.actual-score2 h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.second-rank .bg-color2 {
+    background-color: #F4CE4A;
+    height: 260px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.rank2 {
+    position: relative;
+    top: -127px;
+    left: 50%;
+    transform: translateX(-8%);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.second-rank .circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    border: 6px solid #F4CE4A;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(51, 172, 131);
+}
+
+.second-rank .circle img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.third-rank {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.third-rank .actual-score3 {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.actual-score3 p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.actual-score3 h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#third-rank-container {
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    left: 59%;
+    top: 42%;
+    z-index: -1;
+}
+
+.third-rank .bg-color3 {
+    background-color: #F7E296;
+    height: 260px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.third-rank .circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    border: 6px solid #F7E296;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(51, 172, 131);
+}
+
+.third-rank .circle img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.radius-design {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 440px;
+    /* background-color: #fff; */
+    /* box-shadow: 0px 0px 4px #fff; */
+    z-index: 2;
+}
+
+.radius-design img {
+    position: absolute;
+    top: -15%;
+    width: 100%;
+    z-index: 2;
+    margin-top: 15px;
+}
+
+.ranking-board {
+    position: relative;
+    bottom: 0;
+    width: 1250px;
+    margin: 80px auto 0;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.ranking {
+    width: 1150px;
+    height: 75px;
+    padding: 22px 30px;
+    margin: 25px auto 20px;
+    box-shadow: 4px 4px 3px rgb(202, 201, 201);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ranking span {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.ranking .user-name {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#header .right-side-info ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.right-side-info ul li {
+    list-style: none;
+    color: black;
+    font-weight: 600;
+}
+
+.right-side-info ul a {
+    text-decoration: none;
+}
+
+
+
+
+
+
