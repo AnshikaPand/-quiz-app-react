@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import brainimage from "../../../assets/brain-image.png"
 import googlelogo from "../../../assets/google-logo.png"
 import { useNavigate } from "react-router";
+import { useDispatch } from 'react-redux';
+import { addUserRequest } from '../../../store/user/userAction';
 
 const Signup = () => {
  const[fullName ,setFullName]= useState('')
  const [email,setEmail] = useState('')
  const [password , setPassword]=useState('')
  const [checkBox,setCheckBox]=useState(false)
+ const dispatch = useDispatch()
 let navigate = useNavigate()
 
  const handleSignUpForm=(e)=>{
@@ -48,6 +51,7 @@ let navigate = useNavigate()
     alert("Accept the terms and conditions");
     return;
   } else {
+    dispatch(addUserRequest({fullName, email, password}))
     alert("successfully registered...");
     navigate('/')
   }

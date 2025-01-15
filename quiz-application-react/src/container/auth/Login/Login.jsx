@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import brainimage from "../../../assets/brain-image.png"
 import googlelogo from "../../../assets/google-logo.png"
 import { useNavigate } from "react-router";
+import {useDispatch,useSelector}from "react-redux"
+import {fetchUserRequest} from '../../../store/user/userAction'
 
 
 const Login = () => {
@@ -9,16 +11,27 @@ const Login = () => {
 const [email,setEmail] = useState('')
 const [password,setPassword]=useState('')
 
+const user = useSelector((state)=>state.users.users)
+const dispatch = useDispatch()
+
+
+useEffect(()=>{
+  dispatch(fetchUserRequest())
+},[dispatch])
+
 
 const handleLoginSubmit = (e) =>{
   e.preventDefault();
   if (!email || !password) {
     alert("All fields are mandatory");
     return;
-  } else if (email === "admin14@gmail.com" && password === "Admin@1234") {
-    alert("Successfully login");
+  }
+  const userFound = user.find((user)=>user.email===email && user.password===password)
+  if(userFound){
     navigate('/dashbord')
-  } else {
+    return
+  }
+    else {
     alert("Invalid email or password");
   }
 }

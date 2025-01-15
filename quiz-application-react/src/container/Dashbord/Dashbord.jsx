@@ -4,6 +4,7 @@ import userimage from "../../assets/user_image.jpg"
 import sms1 from "../../assets/sms (1).png"
 import sms2 from "../../assets/sms (2).png"
 import sms3 from "../../assets/sms (3).png"
+import { Link } from 'react-router-dom'
 
 
 const Dashbord = () => {
@@ -57,7 +58,7 @@ const Dashbord = () => {
             </p>
           </div>
         </div>
-        <button class="button" id="button" onclick="navigate()">Start Quiz</button>
+       <Link to="/quizQuestion"><button class="button" id="button">Start Quiz</button></Link>
       </section>
     </main>
 
