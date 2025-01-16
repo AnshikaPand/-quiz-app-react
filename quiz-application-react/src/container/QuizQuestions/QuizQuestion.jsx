@@ -3,28 +3,59 @@ import teachpaathshala from "../../assets/techpaathshala.svg";
 import userimage from "../../assets/user_image.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestionRequest } from "../../store/questions/questionAction";
+import { addUserTestRequest } from "../../store/userTest/userTestAction";
 
 const QuizQuestion = () => {
   const [randomQuestion, setRandomQuestion] = useState([]);
   const [questionsIndex, setQuestionsIndex] = useState(0);
   const [progressBar, setProgressBar] = useState(0);
   const [selectedOptions, setSelectedOption] = useState([]);
+  const [score, setScore] = useState(null)
+  
+
+  let userInfo = JSON.parse(localStorage.getItem("userLoggedIn"))
+
+  // for Score
+  const calculateScore = (timeTaken) => {
+    let totalScore = 0;
+    randomQuestion.forEach((question, index) => {
+      if (selectedOptions[index] === question.correct) {
+        totalScore += 10;
+      }
+    });
+    const finalScore = totalScore;
+    setScore(finalScore);
+    let text = "Are you sure you want to submit";
+    if (confirm(text) == true) {
+      alert(`Quiz finished, Your final score is ${finalScore} out of 100 and Time taken is ${timeTaken}`);
+    }
+    let userInfo = JSON.parse(localStorage.getItem("userLoggedIn"))
+    console.log({ userInfo, totalScore, randomQuestion, selectedOptions })
+    dispatch(addUserTestRequest({ userInfo, totalScore, randomQuestion, selectedOptions, timeTaken }))
+    navigate('/leaderboard')
+  };
+
+
+  // for progress bar
 
   const slidbar = 100;
   const initialSilderValue = slidbar / randomQuestion.length;
   const question = useSelector((state) => state.questions.questions);
   const dispatch = useDispatch();
 
+
+  // fetching Questions
   useEffect(() => {
     dispatch(fetchQuestionRequest());
     console.log(question);
   }, [dispatch]);
 
+  // shuffle Question
   useEffect(() => {
     function shuffleQuestions() {
       let shuffledData = Array.from(question);
       shuffledData.sort(() => Math.random() - 0.5);
-      return shuffledData.slice(0, 10);
+      return shuffledData.slice(0, 3);
     }
     setRandomQuestion(shuffleQuestions());
     console.log(randomQuestion);
@@ -45,6 +76,8 @@ const QuizQuestion = () => {
     if (questionsIndex < randomQuestion.length - 1) {
       setQuestionsIndex(questionsIndex + 1);
       setProgressBar(progressBar + 1);
+    }else{
+      calculateScore()
     }
   }
 

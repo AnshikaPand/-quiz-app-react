@@ -29,6 +29,7 @@ const handleLoginSubmit = (e) =>{
   const userFound = user.find((user)=>user.email===email && user.password===password)
   if(userFound){
     navigate('/dashbord')
+    localStorage.setItem("userLoggedIn", JSON.stringify(userFound))
     return
   }
     else {
