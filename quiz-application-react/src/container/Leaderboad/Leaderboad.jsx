@@ -6,6 +6,7 @@ import Vector from "../../assets/Vector 15.png"
 
 
 const Leaderboad = () => {
+  const quizScore = JSON.parse(localStorage.getItem("quizScore")) || {};
   return (
     <>
     <div>
@@ -49,7 +50,7 @@ const Leaderboad = () => {
           
           <div class="circle">
             <p class="username"></p>
-            {/* <!-- <img src="assets/amit.jpeg" alt="" /> --> */}
+            {/* <!-- <img src="assets/anshika.jpeg" alt="" /> --> */}
           </div>
         </div>
       </div>
@@ -62,7 +63,7 @@ const Leaderboad = () => {
             <p>0</p>
           </div>
           <div class="circle">
-            {/* <img src="assets/amit.jpeg" alt="" />  */}
+            {/* <img src="assets/anshika.jpeg" alt="" />  */}
             <p class="username"></p>
           </div>
         </div>
@@ -76,7 +77,7 @@ const Leaderboad = () => {
             <p>00</p>
           </div>
           <div class="circle">
-             {/* <img src="assets/amit.jpeg" alt="" />  */}
+             {/* <img src="assets/anshika.jpeg" alt="" />  */}
             <p class="username"></p>
           </div>
         </div>

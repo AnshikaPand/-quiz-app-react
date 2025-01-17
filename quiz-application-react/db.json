@@ -5,6 +5,12 @@
       "fullName": "anshika",
       "email": "anshika@gmail.com",
       "password": "Anshika@12"
+    },
+    {
+      "id": "73aa",
+      "fullName": "Khushi",
+      "email": "khushi@gmail.com",
+      "password": "Khushi@123"
     }
   ],
   "questions": [
@@ -239,15 +245,135 @@
   ],
   "userTests": [
     {
-      "id": "a5c1",
+      "id": "96ab",
       "userInfo": {
-        "id": "55f6",
-        "fullName": "anshika",
-        "email": "anshika@gmail.com",
-        "password": "Anshika@12"
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
       },
       "totalScore": 0,
       "randomQuestion": [
+        {
+          "question": "What does 'useState' in React do?",
+          "options": [
+            "Creates a state variable.",
+            "Handles side effects.",
+            "Renders components conditionally.",
+            "None of the above."
+          ],
+          "answer": "Creates a state variable.",
+          "explanation": "'useState' is a React Hook that lets you add state to functional components.",
+          "id": "7ce4"
+        },
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": "<a>",
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "options": [
+            "onkeypress",
+            "onkeydown",
+            "onkeyup",
+            "oninput"
+          ],
+          "answer": "onkeydown",
+          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
+          "id": "db31"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        2,
+        0
+      ],
+      "timeTaken": 32
+    },
+    {
+      "id": "de77",
+      "userInfo": {
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "What is the purpose of the 'key' prop in React lists?",
+          "options": [
+            "To uniquely identify a list item.",
+            "To style list items dynamically.",
+            "To create a reference to a DOM element.",
+            "To sort the list items automatically."
+          ],
+          "answer": "To uniquely identify a list item.",
+          "explanation": "The 'key' prop ensures React can efficiently update and render list items by uniquely identifying them.",
+          "id": "9ebb"
+        },
+        {
+          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "options": [
+            "onkeypress",
+            "onkeydown",
+            "onkeyup",
+            "oninput"
+          ],
+          "answer": "onkeydown",
+          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
+          "id": "db31"
+        },
+        {
+          "question": "Which of the following is NOT a valid JavaScript data type?",
+          "options": [
+            "Undefined",
+            "Boolean",
+            "Number",
+            "Element"
+          ],
+          "answer": "Element",
+          "explanation": "'Element' is not a JavaScript data type. The valid data types are String, Number, Boolean, Object, Undefined, Null, and Symbol.",
+          "id": "5fbd"
+        }
+      ],
+      "selectedOptions": [
+        2,
+        1,
+        1
+      ],
+      "timeTaken": 17
+    },
+    {
+      "id": "ab9f",
+      "userInfo": {
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "What does 'DOM' stand for in JavaScript?",
+          "options": [
+            "Document Object Model",
+            "Data Object Model",
+            "Document Oriented Module",
+            "Data Oriented Module"
+          ],
+          "answer": "Document Object Model",
+          "explanation": "The DOM is a programming interface that represents a webpage as a tree structure of objects.",
+          "id": "e7e0"
+        },
         {
           "question": "What does the <meta> tag do in HTML?",
           "options": [
@@ -271,59 +397,90 @@
           "answer": "<a>",
           "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
           "id": "5db5"
-        },
-        {
-          "question": "What is the default file extension for HTML files?",
-          "options": [
-            ".html",
-            ".htm",
-            ".xml",
-            ".doc"
-          ],
-          "answer": ".html",
-          "explanation": "HTML files commonly use the .html extension. The .htm extension is also supported but less frequently used.",
-          "id": "7f49"
         }
       ],
       "selectedOptions": [
-        0,
         1,
-        0
-      ]
+        0,
+        2
+      ],
+      "timeTaken": 18
     },
     {
-      "id": "8881",
+      "id": "f5d1",
       "userInfo": {
-        "id": "55f6",
-        "fullName": "anshika",
-        "email": "anshika@gmail.com",
-        "password": "Anshika@12"
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
       },
       "totalScore": 0,
       "randomQuestion": [
         {
-          "question": "How do you select an element with the ID 'header' in CSS?",
+          "question": "Which tag is used to define a hyperlink in HTML?",
           "options": [
-            "#header",
-            ".header",
-            "header",
-            "*header"
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
           ],
-          "answer": "#header",
-          "explanation": "In CSS, IDs are selected using the '#' symbol followed by the ID name. For example, #header targets the element with the ID 'header'.",
-          "id": "c89a"
+          "answer": "<a>",
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
         },
         {
-          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "question": "What is the purpose of the 'useEffect' hook in React?",
           "options": [
-            "onkeypress",
-            "onkeydown",
-            "onkeyup",
-            "oninput"
+            "To create state in functional components.",
+            "To handle side effects like data fetching.",
+            "To optimize component rendering.",
+            "To handle props updates."
           ],
-          "answer": "onkeydown",
-          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
-          "id": "db31"
+          "answer": "To handle side effects like data fetching.",
+          "explanation": "'useEffect' is used in React functional components to perform tasks such as data fetching, subscriptions, or manual DOM changes.",
+          "id": "7c0b"
+        },
+        {
+          "question": "What is the purpose of the 'key' prop in React lists?",
+          "options": [
+            "To uniquely identify a list item.",
+            "To style list items dynamically.",
+            "To create a reference to a DOM element.",
+            "To sort the list items automatically."
+          ],
+          "answer": "To uniquely identify a list item.",
+          "explanation": "The 'key' prop ensures React can efficiently update and render list items by uniquely identifying them.",
+          "id": "9ebb"
+        }
+      ],
+      "selectedOptions": [
+        2,
+        1,
+        3
+      ],
+      "timeTaken": 51
+    },
+    {
+      "id": "66ca",
+      "userInfo": {
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "Which method is used to fetch data in React?",
+          "options": [
+            "fetch()",
+            "getData()",
+            "axios()",
+            "requestData()"
+          ],
+          "answer": "fetch()",
+          "explanation": "'fetch()' is a built-in JavaScript function for making HTTP requests, commonly used for fetching data in React.",
+          "id": "fefe"
         },
         {
           "question": "Which property is used to make text bold in CSS?",
@@ -336,13 +493,80 @@
           "answer": "font-weight",
           "explanation": "The 'font-weight' property in CSS is used to set the weight (or boldness) of the text.",
           "id": "e566"
+        },
+        {
+          "question": "What is the difference between 'state' and 'props' in React?",
+          "options": [
+            "'state' is managed within the component, 'props' are passed from parent to child.",
+            "'props' are managed within the component, 'state' is passed from parent to child.",
+            "Both 'state' and 'props' are read-only.",
+            "'state' is immutable, 'props' are mutable."
+          ],
+          "answer": "'state' is managed within the component, 'props' are passed from parent to child.",
+          "explanation": "'state' is local to the component and can be changed, whereas 'props' are passed from parent to child and are immutable.",
+          "id": "5075"
         }
       ],
       "selectedOptions": [
-        2,
         1,
+        1,
+        1
+      ],
+      "timeTaken": 15
+    },
+    {
+      "id": "0557",
+      "userInfo": {
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "What is the purpose of the 'useEffect' hook in React?",
+          "options": [
+            "To create state in functional components.",
+            "To handle side effects like data fetching.",
+            "To optimize component rendering.",
+            "To handle props updates."
+          ],
+          "answer": "To handle side effects like data fetching.",
+          "explanation": "'useEffect' is used in React functional components to perform tasks such as data fetching, subscriptions, or manual DOM changes.",
+          "id": "7c0b"
+        },
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": "<a>",
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "Which of the following is NOT a valid JavaScript data type?",
+          "options": [
+            "Undefined",
+            "Boolean",
+            "Number",
+            "Element"
+          ],
+          "answer": "Element",
+          "explanation": "'Element' is not a JavaScript data type. The valid data types are String, Number, Boolean, Object, Undefined, Null, and Symbol.",
+          "id": "5fbd"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        2,
         2
-      ]
+      ],
+      "timeTaken": 30
     }
   ]
 }

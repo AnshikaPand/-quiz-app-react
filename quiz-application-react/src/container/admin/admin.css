@@ -1,0 +1,1135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Apply to body and headings */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* home page */
+#home-page a{
+    text-decoration: none;
+    
+}
+#home-page .nav-bar a{
+    color: black;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.nav-bar {
+    display: flex; 
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically centered */
+    padding: 10px 20px;
+    background-color:  #f7f7f7; 
+}
+
+
+.nav-bar ul {
+    display: flex; 
+    gap: 25px; 
+}
+
+#oderlist {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: larger;
+}
+
+.nav-bar ul li {
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+/* Style for the logo image */
+.nav-img img {
+    height: 30px; 
+}
+
+
+section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 95vh; 
+    padding: 20px;
+    background-color: #e0e0e0; 
+}
+
+
+.background-div {
+    max-width: 1500px;
+    height: 100px; /* Minimized height */
+    background-image: url('/img/undraw_Sign_in_re_o58h (1).png');
+    background-size: contain; /* Ensures the image fits within the div without being cut off */
+    background-position: center; /* Centers the image within the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin-top: -350px;
+}
+
+
+#container {
+    text-align: center;
+    /* max-width: 1200px; */
+    padding: 20px;
+    background-color: #e0e0e0; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    margin-top: 30vh;
+    
+}
+
+#container >#start{
+    display: block;
+    font-size: 34px; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+    color: #F3BD00;
+}
+
+#container p {
+    font-size: 16px; 
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#container >#ligth-color{
+color: #5d5a5a;
+font-size: larger;
+
+}
+
+#home-btn span{
+    font-weight: 700;
+}
+
+#container >#home-btn > button{
+
+    border: none;
+    background-color: #F3BD00;
+    height: 60px;
+    width: 100px; 
+    margin-top: 20px;
+}
+
+#container >#home-btn > button a{
+    color: #ffffff;
+    font-size: 20px;
+}
+#container >#home-btn > button i{
+
+    font-size: 20px;
+}
+
+
+
+
+
+
+/* --------teacher.html ----------*/
+
+.Teacher-Page, #student-information{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+/* Admin Page specific CSS for the navbar */
+ header {
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f7f7f7; 
+    color: #333; 
+    padding: 15px 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.Teacher-Page nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and right-side elements */
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ #head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+ #head img {
+    height: 25px; /* Adjust the logo size */
+    margin-right: 10px; /* Space between the logo and the arrow/back icon */
+    position: fixed;
+}
+
+ #head a {
+    color: #333; /* Adjust color for the back arrow */
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Styling for welcome message */
+#welcome-admin {
+    font-size: 24px;  
+    font-weight: bold; 
+    text-align: right;
+    color: #333; 
+    overflow: hidden; 
+    white-space: nowrap;
+    margin-left: auto; 
+    margin-right: 70px; 
+}
+
+.view-more-btn{
+    text-decoration: none;
+   color: #000080;
+}
+
+/* Styling for the admin logout button */
+#admin-logout-btn {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-image: url('/img/Adminbackground\ img.jpg'); 
+    background-size: cover;
+    cursor: pointer;
+    position: fixed; 
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#admin-logout-btn:hover {
+    background-color: #F3BD00; /* Light grey on hover */
+}
+
+/* Optional: Styling the horizontal line under the nav */
+.Teacher-Page header hr {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Style for the Boxicon Menu */
+.Teacher-Page #head i {
+    color: #000; 
+    font-size: 30px; 
+    margin-left: -45px; 
+    z-index: 1001;
+}
+
+
+
+
+/* Ensure the sidebar is shown by default */
+.sidebar {
+    position: fixed;
+    margin-top: 5.5%;
+    padding-top: 20px;
+    left: 0; /* Sidebar visible by default */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    font-weight: 500;
+    background-color: #f7f7f7;
+    transition: left 0.3s ease; 
+    z-index: 1000;
+ /* Adding right border only */
+    border-right: 2px solid #ccc; /* Change color and thickness as needed */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-family: sans-serif;
+}
+
+/* When the sidebar is toggled (hidden), it moves left */
+.sidebar.active {
+    left: -250px; /* Sidebar hidden */
+}
+
+#logout-btn{
+margin-top: 350px;
+margin-left: -3px;
+font-size: x-large;
+}
+/* Page content */
+.content {
+    margin-left: 250px; 
+    transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is hidden, content takes full width */
+.sidebar.active ~ .content {
+    margin-left: 0; /* Content expands when sidebar is hidden */
+    font-weight: 500;
+}
+
+/* Style for the Boxicon Menu */
+.Teacher-Page #head i {
+    color: #000; 
+    font-size: 30px; 
+    margin-left: -45px; 
+    z-index: 1001;
+}
+
+.sidebar.active ~ body {
+    padding-left: 250px;
+}
+
+
+/* Styling for the sidebar menu list */
+.sidebar ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    text-align: left;
+}
+
+/* Sidebar list items */
+.sidebar ul li {
+    padding: 15px 20px;
+    font-size: 18px; 
+   
+}
+
+/* Sidebar menu title */
+.sidebar .menu-title {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+/* Sidebar Links Styling */
+.sidebar ul li a {
+    color: #545252;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+    background-color: #F3BD00;
+}
+
+/* Active/Clicked Link State */
+.sidebar ul li.active a {
+    background-color: #989494;
+    color: #000;
+}
+
+/* Ensure Logout Button is Visible */
+.sidebar ul li#logout-btn {
+    margin-top: auto; /* Push logout button to the bottom */
+    background-color: #fffefe;
+    margin-top: 280px;
+}
+
+.sidebar ul li#logout-btn a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for Logout Button */
+.sidebar ul li#logout-btn:hover {
+    background-color: #555;
+}
+
+
+
+/* Container for user count boxes */
+.user-count-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin-top: 100px;
+}
+
+/* Adjust individual user-count-box styles if necessary */
+.user-count-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    height: 150px;
+    width: 280px;
+}
+
+.user-count-box i {
+    font-size: 56px; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+    margin-left: 2cqw;
+    /* margin-top: -30px; */
+}
+
+.user-count-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-count-text h2 {
+    margin: 0;
+    font-size: 22px;
+    /* margin-top: -20px; */
+}
+
+.user-count-text p {
+    margin: 5px 0 0;
+    font-size: 20px; 
+    font-weight: 600;
+    margin-left: 40px;
+    color: #333;
+}
+
+
+/* ------Adminlogin Page-------- */
+
+
+ /* Scoped to #admin-login-page */
+ #admin-login-page {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#admin-login-page .admin-login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#admin-login-page .admin-login-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#admin-login-page .admin-login-img img {
+    max-width: 140%;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: -50px;
+}
+
+#admin-login-page .admin-login-content {
+    flex: 1;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: -70px;
+    max-width: 500px;
+}
+
+#admin-login-page .admin-login-content h1 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    width: 170px;
+}
+
+#admin-login-page .admin-login-content span {
+    display: block;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+#admin-login-page .admin-input {
+    margin-bottom: 15px;
+    width: 320px;
+}
+
+#admin-login-page .admin-input p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#admin-login-page .admin-input input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#admin-login-page .admin-password-container {
+    position: relative;
+}
+
+#admin-login-page .admin-password-container input {
+    padding-right: 40px;
+}
+
+#admin-login-page .admin-password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#admin-login-page .admin-login-btn {
+    margin-top: 20px;
+}
+
+#admin-login-page .admin-btn-1, #admin-login-page .admin-btn-2 {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#admin-login-page .admin-btn-1 {
+    background-color: #F3BD00;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#admin-login-page .admin-btn-2 {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#admin-login-page .admin-btn-2 img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#admin-login-page .admin-login-signup {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#admin-login-page .admin-login-signup a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 568px) {
+    #admin-login-page .admin-login-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #admin-login-page .admin-login-img, #admin-login-page .admin-login-content {
+        width: 80%;
+    }
+
+    #admin-login-page .admin-login-content {
+        margin-top: 20px;
+    }
+
+    #admin-login-page .admin-login-img img {
+        max-width: 80%;
+    }
+}
+
+
+
+/*------- Student information------ */
+
+
+/* Specific container for the student information section */
+#student-information {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 20px;
+}
+
+/* Styling the table to cover the full page */
+#Information {
+    margin-top: 5%;
+    width: 100%;
+    max-width: 1000px; 
+    border-collapse: collapse;
+    background-color: #ffffff; 
+}
+
+/* Table header and cell styles */
+#Information th, #Information td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+}
+
+#Information th {
+    background-color: #f2f2f2; /* Optional: can remove if not needed */
+    font-weight: bold;
+    color: #333;
+}
+
+#Information td {
+    color: #555;
+}
+
+/* Styling for small screens */
+@media screen and (max-width: 768px) {
+    #Information th, #Information td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+/*------ EditeQuestion .html ------*/
+
+
+
+#edit-question-page {
+    background-color: #ffffff;   
+}
+
+
+#edit-question-page table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 18%;
+    background-color: #ffffff;
+}
+
+
+#edit-question-page th, #edit-question-page td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#edit-question-page th {
+    background-color: #ede8e8;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+
+#edit-question-page tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+
+#edit-question-page .actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+#edit-question-page .edit-btn, #edit-question-page .delete-btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+
+#edit-question-page .edit-btn {
+    background-color: #e8f8f5;; /* Edit button color */
+}
+
+#edit-question-page .delete-btn {
+    background-color: #ffe2df; 
+    opacity: 0.5;/* Delete button color */
+}
+.bx-pencil{
+
+}
+
+.bx bx-trash{
+    color: #282828;
+}
+
+#add-question-btn {
+    background-color: green; /* Color */
+    opacity: 0.7;
+    height: 50px;
+    width: 250px;
+    display: flex; /* Center button content */
+    justify-content: center; /* Center align content */
+    align-items: center; /* Center align vertically */
+    padding: 15px 30px;
+    margin-left: 80%;
+    font-weight: 500;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light border */
+}
+
+
+th {
+    background-color: #F4CE4A; /* Consistent header color */
+}
+
+
+.question-container h1 {
+    text-align: center; /* Center the title */
+}
+
+/* Adjustments for buttons in the action area */
+.edit-btn, .delete-btn {
+    margin-right: 10px; /* Space between buttons */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+}
+
+
+
+/* Edit Question Page shift left when sidebar is active */
+#edit-question-page.shifted {
+    transform: translateX(-150px); 
+    transition: transform 0.3s ease; 
+}
+
+/* Table styles */
+#questions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#questions-table th,
+#questions-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#questions-table th {
+    background-color: #f4f4f4;
+}
+
+/* Actions buttons styling */
+.actions-cell button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.actions-cell i {
+    font-size: 20px;
+}
+
+      td div {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .actions-cell {
+        display: flex;
+        gap: 10px;
+      }
+
+      .actions-cell button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .actions-cell i {
+        font-size: 20px;
+      }
+
+      /* Modal Styles */
+      #modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 400px;
+        max-width: 90%;
+      }
+
+      .modal-content h2 {
+        margin-bottom: 15px;
+      }
+
+      .close-btn {
+        float: right;
+        cursor: pointer;
+      }
+
+      /* Delete Modal Styles */
+      #delete-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .delete-modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 400px;
+        max-width: 90%;
+      }
+
+      .delete-modal-content h2 {
+        margin-bottom: 15px;
+      }
+
+      .delete-modal-content .actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Edit Modal Styles */
+      #edit-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .edit-modal-content {
+        background-color: white;
+        padding: 50px;
+        border-radius: 8px;
+        width: 500px;
+        max-width: 90%;
+      }
+
+      .edit-modal-content h2 {
+        margin-bottom: 15px;
+      }
+
+      .edit-modal-content form input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+      }
+
+      .edit-modal-content form button {
+        padding: 10px;
+        background-color: #1f78ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .close-edit-btn {
+        float: right;
+        cursor: pointer;
+        height: 50px;
+      }
+ 
+
+        /*----------------- view more------------ */
+        .user-details-container {
+            top: 100px;
+            width: 50%;
+            margin: auto;
+            text-align: left;
+            
+        }
+        
+        table {
+            
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        
+        td {
+            background-color: #fafafa;
+        }
+
+
+        
+       -------- /* question Page */--------
+
+       #addquestion-page {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #bcaeae;
+    }
+    
+    .container {
+        width: 75%;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-left: 250px;
+        margin-top: 90px;
+        position: fixed;
+    }
+    
+    h2 {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+
+     .option-input,.answer-input{
+        width: 50%;
+    }
+    
+    input {
+        width: 80%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        width: 30%;
+        padding: 10px;
+        background-color: #F3BD00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+       align-items: center;
+    }
+    
+    button:hover {
+        background-color: #F3BD00;
+    }
+
+    /* user-test-attempts.html */
+
+     /* Simple table styling */
+     #test-attempts table {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        margin-left: 20%;
+        /* margin-left: 0%; */
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .view-more-btn {
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .view-more-btn:hover {
+        text-decoration: underline;
+    }
+
+    /* Add vertical lines between the columns */
+    td {
+        border-right: 1px solid #ddd;
+    }
+
+    td:last-child {
+        border-right: none; /* Remove the border from the last column */
+    }
+    
+
+    /* view-test-details */
+
+    .answer-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px;
+        display: inline-block;
+        width: calc(80% - 22px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        vertical-align: top;
+        margin-left: 15%;
+    }
+
+    .answer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #test-details-page {
+        margin-top: 8%;
+        text-align: center;
+    }
+
+    #test-details {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .test-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 75%;
+        margin-left: 18%;
+        margin-top: 50px;
+    }
+
+    .test-info span {
+        margin-right: 15px;
+    }
+
+    .correct-answer {
+        color: blue;
+        font-weight: bold;
+    }
+
+    .incorrect-answer {
+        color: red;
+        font-weight: bold;
+    }
+
+    .selected-answer {
+        font-weight: bold;
+        color: green;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin-bottom: 5px;
+    }

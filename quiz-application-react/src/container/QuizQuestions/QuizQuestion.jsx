@@ -1,133 +1,166 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import teachpaathshala from "../../assets/techpaathshala.svg";
 import userimage from "../../assets/user_image.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestionRequest } from "../../store/questions/questionAction";
 import { addUserTestRequest } from "../../store/userTest/userTestAction";
+import { useNavigate } from "react-router-dom";
 
 const QuizQuestion = () => {
   const [randomQuestion, setRandomQuestion] = useState([]);
   const [questionsIndex, setQuestionsIndex] = useState(0);
   const [progressBar, setProgressBar] = useState(0);
-  const [selectedOptions, setSelectedOption] = useState([]);
-  const [score, setScore] = useState(null)
-  
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [score, setScore] = useState(0);
+  const [startTime, setStartTime] = useState(null);
 
-  let userInfo = JSON.parse(localStorage.getItem("userLoggedIn"))
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const question = useSelector((state) => state.questions.questions);
 
-  // for Score
-  const calculateScore = (timeTaken) => {
+  const userInfo = JSON.parse(localStorage.getItem("userLoggedIn"));
+
+  // Start the timer when the quiz begins
+  useEffect(() => {
+    if (randomQuestion.length > 0 && startTime === null) {
+      setStartTime(Date.now()); // Start the timer when questions are available
+    }
+  }, [randomQuestion, startTime]);
+
+  // Calculate and submit the score
+  const calculateScore = () => {
     let totalScore = 0;
+    
     randomQuestion.forEach((question, index) => {
-      if (selectedOptions[index] === question.correct) {
-        totalScore += 10;
+      if (selectedOptions[index] !== undefined && selectedOptions[index] === question.answer) {
+        totalScore += 10; 
       }
     });
+  
+    setScore(totalScore);
+    console.log('Final score:', totalScore); 
+  
+    const endTime = Date.now();
+    const timeTaken = Math.round((endTime - startTime) / 1000); // Time taken in seconds
     const finalScore = totalScore;
-    setScore(finalScore);
-    let text = "Are you sure you want to submit";
-    if (confirm(text) == true) {
-      alert(`Quiz finished, Your final score is ${finalScore} out of 100 and Time taken is ${timeTaken}`);
+  
+    const confirmSubmission = window.confirm("Are you sure you want to submit?");
+    if (confirmSubmission) {
+      alert(
+        `Quiz finished! Your final score is ${finalScore} out of ${
+          randomQuestion.length * 10
+        }. Time taken: ${timeTaken} seconds.`
+      );
+      
+      // Dispatch action to save user test data
+      dispatch(
+        addUserTestRequest({
+          userInfo,
+          totalScore: finalScore,
+          randomQuestion,
+          selectedOptions,
+          timeTaken,
+        })
+      );
+  
+      navigate("/leaderbord");
     }
-    let userInfo = JSON.parse(localStorage.getItem("userLoggedIn"))
-    console.log({ userInfo, totalScore, randomQuestion, selectedOptions })
-    dispatch(addUserTestRequest({ userInfo, totalScore, randomQuestion, selectedOptions, timeTaken }))
-    navigate('/leaderboard')
   };
+  
 
+  // Progress bar logic
+  const sliderTotal = 100;
+  const initialSliderValue = sliderTotal / randomQuestion.length;
 
-  // for progress bar
-
-  const slidbar = 100;
-  const initialSilderValue = slidbar / randomQuestion.length;
-  const question = useSelector((state) => state.questions.questions);
-  const dispatch = useDispatch();
-
-
-  // fetching Questions
+  // Fetch questions from Redux store
   useEffect(() => {
     dispatch(fetchQuestionRequest());
-    console.log(question);
   }, [dispatch]);
 
-  // shuffle Question
+  // Shuffle questions and pick a subset
   useEffect(() => {
-    function shuffleQuestions() {
-      let shuffledData = Array.from(question);
-      shuffledData.sort(() => Math.random() - 0.5);
-      return shuffledData.slice(0, 3);
+    if (question.length > 0) {
+      const shuffleQuestions = () => {
+        const shuffledData = [...question];
+        shuffledData.sort(() => Math.random() - 0.5);
+        return shuffledData.slice(0, 3); // Only take the first 10 questions
+      };
+      setRandomQuestion(shuffleQuestions());
     }
-    setRandomQuestion(shuffleQuestions());
-    console.log(randomQuestion);
   }, [question]);
 
   const handleOptionSelect = (index) => {
-    const updatedOption = [...selectedOptions];
-    updatedOption[questionsIndex] = index;
-    setSelectedOption(updatedOption);
-    console.log("Running");
+    const updatedOptions = [...selectedOptions];
+    updatedOptions[questionsIndex] = index;
+    setSelectedOptions(updatedOptions);
+    console.log(`Selected option for question ${questionsIndex + 1}:`, index); 
   };
+  
 
-  function nextQuestion() {
+  const nextQuestion = () => {
     if (selectedOptions[questionsIndex] === undefined) {
-      alert("Selecter karo age nikalo");
+      alert("Please select an option before moving to the next question.");
       return;
     }
     if (questionsIndex < randomQuestion.length - 1) {
       setQuestionsIndex(questionsIndex + 1);
       setProgressBar(progressBar + 1);
-    }else{
-      calculateScore()
+    } else {
+      calculateScore(); // Calculate and submit score when it's the last question
     }
-  }
+  };
 
-  function previousQuestion() {
-    setQuestionsIndex(questionsIndex - 1);
-    setProgressBar(progressBar - 1);
-  }
+  const previousQuestion = () => {
+    if (questionsIndex > 0) {
+      setQuestionsIndex(questionsIndex - 1);
+      setProgressBar(progressBar - 1);
+    }
+  };
+
   return (
     <>
       <header id="header">
         <div id="tech-logo">
-          <a href="startquiz.html">
-            <img src={teachpaathshala} alt="techpaathsala" />
+          <a href="/startquiz">
+            <img src={teachpaathshala} alt="Tech Paathshala Logo" />
           </a>
         </div>
 
-        <div class="right-side-info">
+        <div className="right-side-info">
           <ul>
-            <a href="startquiz.html">
-              <li></li>
-            </a>
             <li>Welcome,</li>
-            <li>Anshika</li>
-            <img id="popup" onclick="popUp()" src={userimage} alt="userimage" />
+            <li>{userInfo?.fullName || "Anshika"}</li>
+            <img
+              id="popup"
+              src={userimage}
+              alt="User Profile"
+              onClick={() => alert("User Profile Popup")}
+            />
           </ul>
         </div>
       </header>
 
       <section id="question-answer">
-        <h1 id="question-number">{`Questions ${questionsIndex + 1} of 10`}</h1>
+        <h1 id="question-number">{`Question ${questionsIndex + 1} of ${randomQuestion.length}`}</h1>
         <div id="progressbar-container">
           <div
             id="progress-bar"
             style={{
               width: `${
-                initialSilderValue * progressBar +
-                slidbar / randomQuestion.length
+                initialSliderValue * progressBar +
+                sliderTotal / randomQuestion.length
               }%`,
             }}
           ></div>
         </div>
-        <div class="question">
+        <div className="question">
           <h2 id="question-text">{randomQuestion[questionsIndex]?.question}</h2>
         </div>
-        <div class="answer">
-          <ol type="1" id="options-list">
+        <div className="answer">
+          <ol id="options-list">
             {randomQuestion[questionsIndex]?.options.map((option, index) => (
               <li
                 key={index}
-                id="option-2"
                 className={`option ${
                   selectedOptions[questionsIndex] === index ? "selected" : ""
                 }`}
@@ -136,28 +169,29 @@ const QuizQuestion = () => {
                 {option}
               </li>
             ))}
-
-            {/* <li id="option-1"></li>
-                
-                <li id="option-3"></li>
-                <li id="option-4"></li>  */}
           </ol>
         </div>
-        <button onClick={previousQuestion} id="prev">
-          <i class="fa-solid fa-arrow-left"></i> Previous
-        </button>
-        <button onClick={nextQuestion} id="next">
-          Next <i class="fa-solid fa-arrow-right"></i>
-        </button>
+        <div className="navigation-buttons">
+          {questionsIndex > 0 && (
+            <button onClick={previousQuestion} id="prev">
+              Previous
+            </button>
+          )}
+          <button onClick={nextQuestion} id="next">
+            {questionsIndex < randomQuestion.length - 1 ? "Next" : "Submit"}
+          </button>
+        </div>
       </section>
 
       <div id="logout-container">
-        <p id="my-name">Hii, Anshika</p>
-        <p id="my-email">anshika123@gmail.com</p>
-        <button id="logout-button" onclick="logout()">
+        <p id="my-name">Hi, {userInfo?.name || "User"}</p>
+        <p id="my-email">{userInfo?.email || "example@example.com"}</p>
+        <button id="logout-button" onClick={() => alert("Logout Successful")}>
           Logout
         </button>
-        <button id="logout-button">Edit</button>
+        <button id="edit-button" onClick={() => alert("Edit Profile")}>
+          Edit
+        </button>
       </div>
     </>
   );
