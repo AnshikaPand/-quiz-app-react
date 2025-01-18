@@ -32,16 +32,16 @@ const QuizQuestion = () => {
     let totalScore = 0;
     
     randomQuestion.forEach((question, index) => {
-      if (selectedOptions[index] !== undefined && selectedOptions[index] === question.answer) {
+      if ( selectedOptions[index] === question.answer) {
         totalScore += 10; 
       }
+      return totalScore
     });
-  
-    setScore(totalScore);
+   // setScore(totalScore);
     console.log('Final score:', totalScore); 
   
     const endTime = Date.now();
-    const timeTaken = Math.round((endTime - startTime) / 1000); // Time taken in seconds
+    const timeTaken = Math.round((endTime - startTime) / 1000); 
     const finalScore = totalScore;
   
     const confirmSubmission = window.confirm("Are you sure you want to submit?");
@@ -63,7 +63,7 @@ const QuizQuestion = () => {
         })
       );
   
-      navigate("/leaderbord");
+     navigate("/leaderbord");
     }
   };
   

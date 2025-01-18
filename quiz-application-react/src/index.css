@@ -463,12 +463,15 @@ main {
 }
 
 #first-rank-container {
-    height: 525px;
+    height: 280px;
     width: 200px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 0%;
+    top: 40%;
+    background:#F3BD00;
+    border-top-left-radius: 10%;
+    border-top-right-radius:10%;
 }
 
 .first-rank {
@@ -483,36 +486,33 @@ main {
     top: 43%;
     transform: translateX(-50%);
     z-index: 2;
+    margin-top: 50%;
 }
 
-.actual-score h2 {
+.actual-score1 h2 {
     font-size: 32px;
+    margin-top: 50%;
     font-weight: bold;
+    margin-left: 27%;
+    
 }
 
-.actual-score p {
+.actual-score1 p {
     text-align: center;
     font-size: 17px;
+    
     font-weight: 500;
 }
 
-.bg-color {
-    background-color: #F3BD00;
-    height: 380px;
-    width: 100%;
-    border-radius: 12px 12px 0px 0px;
-    position: absolute;
-    bottom: 0;
-}
 
 .first-rank .circle {
     height: 150px;
     width: 150px;
     border: 7px solid #F3BD00;
     border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 12.5%;
+    position: relative;
+    margin-top: -130%;
+    margin-left: 100px;
     transform: translateX(-50%);
     background-color: rgb(51, 172, 131);
 }
@@ -528,6 +528,7 @@ main {
     width: 76px;
     position: absolute;
     left: 50%;
+    margin-top: -80%;
     top: 6px;
     transform: translateX(-54%);
 }
