@@ -11,6 +11,24 @@
       "fullName": "Khushi",
       "email": "khushi@gmail.com",
       "password": "Khushi@123"
+    },
+    {
+      "id": "d3d5",
+      "fullName": "Ekta",
+      "email": "ekta@gmail.com",
+      "password": "Ekta@12345"
+    },
+    {
+      "id": "23f1",
+      "fullName": "Sweta",
+      "email": "sweta@gmail.com",
+      "password": "sweta@12345"
+    },
+    {
+      "id": "7a0a",
+      "fullName": "Admin",
+      "email": "admin@gmail.com",
+      "password": "Admin@12345"
     }
   ],
   "questions": [
@@ -279,102 +297,6 @@
           "id": "7f49"
         },
         {
-          "question": "What does the <meta> tag do in HTML?",
-          "options": [
-            "Defines metadata about the document.",
-            "Creates links to other pages.",
-            "Formats text in a specific way.",
-            "Defines styles for the page."
-          ],
-          "answer": 0,
-          "explanation": "The <meta> tag provides information about the document, such as character encoding and viewport settings.",
-          "id": "31ec"
-        }
-      ],
-      "selectedOptions": [
-        0,
-        0,
-        0
-      ],
-      "timeTaken": 13
-    },
-    {
-      "id": "3031",
-      "userInfo": {
-        "id": "55f6",
-        "fullName": "anshika",
-        "email": "anshika@gmail.com",
-        "password": "Anshika@12"
-      },
-      "totalScore": 20,
-      "randomQuestion": [
-        {
-          "question": "What is the difference between 'state' and 'props' in React?",
-          "options": [
-            "'state' is managed within the component, 'props' are passed from parent to child.",
-            "'props' are managed within the component, 'state' is passed from parent to child.",
-            "Both 'state' and 'props' are read-only.",
-            "'state' is immutable, 'props' are mutable."
-          ],
-          "answer": 0,
-          "explanation": "'state' is local to the component and can be changed, whereas 'props' are passed from parent to child and are immutable.",
-          "id": "5075"
-        },
-        {
-          "question": "What is JSX in React?",
-          "options": [
-            "A syntax extension for JavaScript.",
-            "A type of CSS framework.",
-            "A template engine for React.",
-            "A database query language."
-          ],
-          "answer": 0,
-          "explanation": "JSX allows you to write HTML-like syntax in JavaScript files, making React component creation easier.",
-          "id": "195b"
-        },
-        {
-          "question": "Which property is used to change the background color of an element?",
-          "options": [
-            "color",
-            "background",
-            "background-color",
-            "bgcolor"
-          ],
-          "answer": 2,
-          "explanation": "The background-color property in CSS is used to set the background color of an HTML element.",
-          "id": "477f"
-        }
-      ],
-      "selectedOptions": [
-        0,
-        0,
-        3
-      ],
-      "timeTaken": 15
-    },
-    {
-      "id": "14fe",
-      "userInfo": {
-        "id": "73aa",
-        "fullName": "Khushi",
-        "email": "khushi@gmail.com",
-        "password": "Khushi@123"
-      },
-      "totalScore": 20,
-      "randomQuestion": [
-        {
-          "question": "What is the default file extension for HTML files?",
-          "options": [
-            ".html",
-            ".htm",
-            ".xml",
-            ".doc"
-          ],
-          "answer": 0,
-          "explanation": "HTML files commonly use the .html extension. The .htm extension is also supported but less frequently used.",
-          "id": "7f49"
-        },
-        {
           "question": "Which property is used to make text bold in CSS?",
           "options": [
             "font-weight",
@@ -441,6 +363,138 @@
           "id": "7c0b"
         },
         {
+          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "options": [
+            "onkeypress",
+            "onkeydown",
+            "onkeyup",
+            "oninput"
+          ],
+          "answer": 1,
+          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
+          "id": "db31"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        1,
+        1
+      ],
+      "timeTaken": 14
+    },
+    {
+      "id": "a22b",
+      "userInfo": {
+        "id": "55f6",
+        "fullName": "anshika",
+        "email": "anshika@gmail.com",
+        "password": "Anshika@12"
+      },
+      "totalScore": 20,
+      "randomQuestion": [
+        {
+          "question": "What does 'useState' in React do?",
+          "options": [
+            "Creates a state variable.",
+            "Handles side effects.",
+            "Renders components conditionally.",
+            "None of the above."
+          ],
+          "answer": 0,
+          "explanation": "'useState' is a React Hook that lets you add state to functional components.",
+          "id": "7ce4"
+        },
+        {
+          "question": "What does CSS stand for?",
+          "options": [
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+          ],
+          "answer": 1,
+          "explanation": "CSS is used to style the layout and appearance of web pages, making them visually appealing.",
+          "id": "0df7"
+        },
+        {
+          "question": "What is JSX in React?",
+          "options": [
+            "A syntax extension for JavaScript.",
+            "A type of CSS framework.",
+            "A template engine for React.",
+            "A database query language."
+          ],
+          "answer": 0,
+          "explanation": "JSX allows you to write HTML-like syntax in JavaScript files, making React component creation easier.",
+          "id": "195b"
+        },
+        {
+          "question": "Which property is used to change the background color of an element?",
+          "options": [
+            "color",
+            "background",
+            "background-color",
+            "bgcolor"
+          ],
+          "answer": 2,
+          "explanation": "The background-color property in CSS is used to set the background color of an HTML element.",
+          "id": "477f"
+        },
+        {
+          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "options": [
+            "onkeypress",
+            "onkeydown",
+            "onkeyup",
+            "oninput"
+          ],
+          "answer": 1,
+          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
+          "id": "db31"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        1,
+        1
+      ],
+      "timeTaken": 26
+    },
+    {
+      "id": "2044",
+      "userInfo": {
+        "id": "55f6",
+        "fullName": "anshika",
+        "email": "anshika@gmail.com",
+        "password": "Anshika@12"
+      },
+      "totalScore": 10,
+      "randomQuestion": [
+        {
+          "question": "How do you select an element with the ID 'header' in CSS?",
+          "options": [
+            "#header",
+            ".header",
+            "header",
+            "*header"
+          ],
+          "answer": 0,
+          "explanation": "In CSS, IDs are selected using the '#' symbol followed by the ID name. For example, #header targets the element with the ID 'header'.",
+          "id": "c89a"
+        },
+        {
+          "question": "Which property is used to change the background color of an element?",
+          "options": [
+            "color",
+            "background",
+            "background-color",
+            "bgcolor"
+          ],
+          "answer": 2,
+          "explanation": "The background-color property in CSS is used to set the background color of an HTML element.",
+          "id": "477f"
+        },
+        {
           "question": "What is the purpose of the 'key' prop in React lists?",
           "options": [
             "To uniquely identify a list item.",
@@ -454,11 +508,497 @@
         }
       ],
       "selectedOptions": [
-        2,
+        0,
         1,
-        2
+        1
       ],
-      "timeTaken": 11
+      "timeTaken": 30
+    },
+    {
+      "id": "219c",
+      "userInfo": {
+        "id": "55f6",
+        "fullName": "anshika",
+        "email": "anshika@gmail.com",
+        "password": "Anshika@12"
+      },
+      "totalScore": 10,
+      "randomQuestion": [
+        {
+          "question": "What does 'this' keyword refer to in JavaScript?",
+          "options": [
+            "The current object context.",
+            "The global object.",
+            "The parent object.",
+            "None of the above."
+          ],
+          "answer": 0,
+          "explanation": "'this' refers to the object that is currently executing the code. Its value depends on how the function is called.",
+          "id": "71e4"
+        },
+        {
+          "question": "What does CSS stand for?",
+          "options": [
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+          ],
+          "answer": 1,
+          "explanation": "CSS is used to style the layout and appearance of web pages, making them visually appealing.",
+          "id": "0df7"
+        },
+        {
+          "question": "Which of the following is NOT a valid JavaScript data type?",
+          "options": [
+            "Undefined",
+            "Boolean",
+            "Number",
+            "Element"
+          ],
+          "answer": 3,
+          "explanation": "'Element' is not a JavaScript data type. The valid data types are String, Number, Boolean, Object, Undefined, Null, and Symbol.",
+          "id": "5fbd"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        0,
+        0
+      ],
+      "timeTaken": 27
+    },
+    {
+      "id": "e5d3",
+      "userInfo": {
+        "id": "d3d5",
+        "fullName": "Ekta",
+        "email": "ekta@gmail.com",
+        "password": "Ekta@12345"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": 0,
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "Which method is used to fetch data in React?",
+          "options": [
+            "fetch()",
+            "getData()",
+            "axios()",
+            "requestData()"
+          ],
+          "answer": 0,
+          "explanation": "'fetch()' is a built-in JavaScript function for making HTTP requests, commonly used for fetching data in React.",
+          "id": "fefe"
+        },
+        {
+          "question": "What is the difference between 'state' and 'props' in React?",
+          "options": [
+            "'state' is managed within the component, 'props' are passed from parent to child.",
+            "'props' are managed within the component, 'state' is passed from parent to child.",
+            "Both 'state' and 'props' are read-only.",
+            "'state' is immutable, 'props' are mutable."
+          ],
+          "answer": 0,
+          "explanation": "'state' is local to the component and can be changed, whereas 'props' are passed from parent to child and are immutable.",
+          "id": "5075"
+        }
+      ],
+      "selectedOptions": [
+        1,
+        1,
+        1
+      ],
+      "timeTaken": 12
+    },
+    {
+      "id": "e386",
+      "userInfo": {
+        "id": "d3d5",
+        "fullName": "Ekta",
+        "email": "ekta@gmail.com",
+        "password": "Ekta@12345"
+      },
+      "totalScore": 20,
+      "randomQuestion": [
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": 0,
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "What does the <meta> tag do in HTML?",
+          "options": [
+            "Defines metadata about the document.",
+            "Creates links to other pages.",
+            "Formats text in a specific way.",
+            "Defines styles for the page."
+          ],
+          "answer": 0,
+          "explanation": "The <meta> tag provides information about the document, such as character encoding and viewport settings.",
+          "id": "31ec"
+        },
+        {
+          "question": "What is the default file extension for HTML files?",
+          "options": [
+            ".html",
+            ".htm",
+            ".xml",
+            ".doc"
+          ],
+          "answer": 0,
+          "explanation": "HTML files commonly use the .html extension. The .htm extension is also supported but less frequently used.",
+          "id": "7f49"
+        }
+      ],
+      "selectedOptions": [
+        1,
+        0,
+        0
+      ],
+      "timeTaken": 183
+    },
+    {
+      "id": "0c3a",
+      "userInfo": {
+        "id": "d3d5",
+        "fullName": "Ekta",
+        "email": "ekta@gmail.com",
+        "password": "Ekta@12345"
+      },
+      "totalScore": 10,
+      "randomQuestion": [
+        {
+          "question": "Which method is used to fetch data in React?",
+          "options": [
+            "fetch()",
+            "getData()",
+            "axios()",
+            "requestData()"
+          ],
+          "answer": 0,
+          "explanation": "'fetch()' is a built-in JavaScript function for making HTTP requests, commonly used for fetching data in React.",
+          "id": "fefe"
+        },
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": 0,
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "What does 'this' keyword refer to in JavaScript?",
+          "options": [
+            "The current object context.",
+            "The global object.",
+            "The parent object.",
+            "None of the above."
+          ],
+          "answer": 0,
+          "explanation": "'this' refers to the object that is currently executing the code. Its value depends on how the function is called.",
+          "id": "71e4"
+        }
+      ],
+      "selectedOptions": [
+        1,
+        2,
+        0
+      ],
+      "timeTaken": 19
+    },
+    {
+      "id": "aa8d",
+      "userInfo": {
+        "id": "73aa",
+        "fullName": "Khushi",
+        "email": "khushi@gmail.com",
+        "password": "Khushi@123"
+      },
+      "totalScore": 30,
+      "randomQuestion": [
+        {
+          "question": "Which property is used to make text bold in CSS?",
+          "options": [
+            "font-weight",
+            "font-bold",
+            "text-weight",
+            "text-bold"
+          ],
+          "answer": 0,
+          "explanation": "The 'font-weight' property in CSS is used to set the weight (or boldness) of the text.",
+          "id": "e566"
+        },
+        {
+          "question": "What does CSS stand for?",
+          "options": [
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+          ],
+          "answer": 1,
+          "explanation": "CSS is used to style the layout and appearance of web pages, making them visually appealing.",
+          "id": "0df7"
+        },
+        {
+          "question": "What is the difference between 'state' and 'props' in React?",
+          "options": [
+            "'state' is managed within the component, 'props' are passed from parent to child.",
+            "'props' are managed within the component, 'state' is passed from parent to child.",
+            "Both 'state' and 'props' are read-only.",
+            "'state' is immutable, 'props' are mutable."
+          ],
+          "answer": 0,
+          "explanation": "'state' is local to the component and can be changed, whereas 'props' are passed from parent to child and are immutable.",
+          "id": "5075"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        1,
+        0
+      ],
+      "timeTaken": 21
+    },
+    {
+      "id": "9de6",
+      "userInfo": {
+        "id": "d3d5",
+        "fullName": "Ekta",
+        "email": "ekta@gmail.com",
+        "password": "Ekta@12345"
+      },
+      "totalScore": 20,
+      "randomQuestion": [
+        {
+          "question": "How do you select an element with the ID 'header' in CSS?",
+          "options": [
+            "#header",
+            ".header",
+            "header",
+            "*header"
+          ],
+          "answer": 0,
+          "explanation": "In CSS, IDs are selected using the '#' symbol followed by the ID name. For example, #header targets the element with the ID 'header'.",
+          "id": "c89a"
+        },
+        {
+          "question": "Which property is used to change the background color of an element?",
+          "options": [
+            "color",
+            "background",
+            "background-color",
+            "bgcolor"
+          ],
+          "answer": 2,
+          "explanation": "The background-color property in CSS is used to set the background color of an HTML element.",
+          "id": "477f"
+        },
+        {
+          "question": "Which property is used to make text bold in CSS?",
+          "options": [
+            "font-weight",
+            "font-bold",
+            "text-weight",
+            "text-bold"
+          ],
+          "answer": 0,
+          "explanation": "The 'font-weight' property in CSS is used to set the weight (or boldness) of the text.",
+          "id": "e566"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        1,
+        0
+      ],
+      "timeTaken": 14
+    },
+    {
+      "id": "22ba",
+      "userInfo": {
+        "id": "23f1",
+        "fullName": "Sweta",
+        "email": "sweta@gmail.com",
+        "password": "sweta@12345"
+      },
+      "totalScore": 20,
+      "randomQuestion": [
+        {
+          "question": "What is the difference between 'let' and 'var'?",
+          "options": [
+            "'let' is block-scoped, 'var' is function-scoped.",
+            "'var' is block-scoped, 'let' is function-scoped.",
+            "Both are function-scoped.",
+            "Both are block-scoped."
+          ],
+          "answer": 0,
+          "explanation": "'let' is confined to the block in which it is defined, while 'var' is scoped to the entire function.",
+          "id": "ebcb"
+        },
+        {
+          "question": "Which tag is used to define a hyperlink in HTML?",
+          "options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "answer": 0,
+          "explanation": "The <a> tag (anchor tag) is used to create hyperlinks in HTML, allowing navigation between pages.",
+          "id": "5db5"
+        },
+        {
+          "question": "What is JSX in React?",
+          "options": [
+            "A syntax extension for JavaScript.",
+            "A type of CSS framework.",
+            "A template engine for React.",
+            "A database query language."
+          ],
+          "answer": 0,
+          "explanation": "JSX allows you to write HTML-like syntax in JavaScript files, making React component creation easier.",
+          "id": "195b"
+        }
+      ],
+      "selectedOptions": [
+        0,
+        2,
+        0
+      ],
+      "timeTaken": 19
+    },
+    {
+      "id": "f7cb",
+      "userInfo": {
+        "id": "23f1",
+        "fullName": "Sweta",
+        "email": "sweta@gmail.com",
+        "password": "sweta@12345"
+      },
+      "totalScore": 0,
+      "randomQuestion": [
+        {
+          "question": "What does 'useState' in React do?",
+          "options": [
+            "Creates a state variable.",
+            "Handles side effects.",
+            "Renders components conditionally.",
+            "None of the above."
+          ],
+          "answer": 0,
+          "explanation": "'useState' is a React Hook that lets you add state to functional components.",
+          "id": "7ce4"
+        },
+        {
+          "question": "What does 'DOM' stand for in JavaScript?",
+          "options": [
+            "Document Object Model",
+            "Data Object Model",
+            "Document Oriented Module",
+            "Data Oriented Module"
+          ],
+          "answer": 0,
+          "explanation": "The DOM is a programming interface that represents a webpage as a tree structure of objects.",
+          "id": "e7e0"
+        },
+        {
+          "question": "What is the difference between 'state' and 'props' in React?",
+          "options": [
+            "'state' is managed within the component, 'props' are passed from parent to child.",
+            "'props' are managed within the component, 'state' is passed from parent to child.",
+            "Both 'state' and 'props' are read-only.",
+            "'state' is immutable, 'props' are mutable."
+          ],
+          "answer": 0,
+          "explanation": "'state' is local to the component and can be changed, whereas 'props' are passed from parent to child and are immutable.",
+          "id": "5075"
+        }
+      ],
+      "selectedOptions": [
+        1,
+        1,
+        1
+      ],
+      "timeTaken": 17
+    },
+    {
+      "id": "26f1",
+      "userInfo": {
+        "id": "23f1",
+        "fullName": "Sweta",
+        "email": "sweta@gmail.com",
+        "password": "sweta@12345"
+      },
+      "totalScore": 20,
+      "randomQuestion": [
+        {
+          "question": "Which property is used to change the background color of an element?",
+          "options": [
+            "color",
+            "background",
+            "background-color",
+            "bgcolor"
+          ],
+          "answer": 2,
+          "explanation": "The background-color property in CSS is used to set the background color of an HTML element.",
+          "id": "477f"
+        },
+        {
+          "question": "What does CSS stand for?",
+          "options": [
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+          ],
+          "answer": 1,
+          "explanation": "CSS is used to style the layout and appearance of web pages, making them visually appealing.",
+          "id": "0df7"
+        },
+        {
+          "question": "Which event is fired when a user presses a key on the keyboard in JavaScript?",
+          "options": [
+            "onkeypress",
+            "onkeydown",
+            "onkeyup",
+            "oninput"
+          ],
+          "answer": 1,
+          "explanation": "'onkeydown' is triggered when a key is pressed down, making it ideal for detecting key presses in real-time.",
+          "id": "db31"
+        }
+      ],
+      "selectedOptions": [
+        3,
+        1,
+        1
+      ],
+      "timeTaken": 24
     }
   ]
 }

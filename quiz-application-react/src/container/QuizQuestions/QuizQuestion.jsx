@@ -116,6 +116,14 @@ const QuizQuestion = () => {
       setProgressBar(progressBar - 1);
     }
   };
+  const logout = () => {
+    localStorage.removeItem("email");
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+if(confirmLogout){
+  navigate("/")
+}    
+    
+  };
 
   return (
     <>
@@ -129,12 +137,12 @@ const QuizQuestion = () => {
         <div className="right-side-info">
           <ul>
             <li>Welcome,</li>
-            <li>{userInfo?.fullName || "Anshika"}</li>
+            <li>{userInfo?.fullName || "User"}</li>
             <img
               id="popup"
+              onClick={logout}
               src={userimage}
               alt="User Profile"
-              onClick={() => alert("User Profile Popup")}
             />
           </ul>
         </div>
@@ -184,7 +192,7 @@ const QuizQuestion = () => {
       </section>
 
       <div id="logout-container">
-        <p id="my-name">Hi, {userInfo?.name || "User"}</p>
+        <p id="my-name">Hi, {userInfo?.fullName || "User"}</p>
         <p id="my-email">{userInfo?.email || "example@example.com"}</p>
         <button id="logout-button" onClick={() => alert("Logout Successful")}>
           Logout

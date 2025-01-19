@@ -20,7 +20,7 @@ const Dashbord = () => {
         <ul>
           <a href="startquiz.html"><li></li></a>
            <li>Welcome,</li>
-           <li>A</li>
+           <li>{userData?.fullName || "Anshika"}</li>
            <img
           id="popup"
           onclick="popUp()"

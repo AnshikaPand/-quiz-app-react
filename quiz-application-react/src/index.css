@@ -739,8 +739,24 @@ main {
     text-decoration: none;
 }
 
-
-
+.password-input-container {
+    position: relative;
+  }
+  
+  .passwordInput {
+    width: 100%;
+    padding-right: 30px; /* Make room for the icon */
+    padding: 10px;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 50px;  
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
 
 
 

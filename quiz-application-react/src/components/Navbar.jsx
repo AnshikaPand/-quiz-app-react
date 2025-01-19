@@ -1,24 +1,32 @@
 import React from 'react';
-import "../container/admin/admin.css"
+import { FaBars, FaUserAlt } from 'react-icons/fa'; // Importing relevant icons
+import "../container/admin/admin.css";
+import techpaathshala from "../assets/techpaathshala.svg"
+import userimage from '../assets/user_image.jpg';
 
 const Navbar = () => {
   return (
-    <div className="Teacher-Page">
-      <header>
-        <nav>
-          <div id="head">
-            <i className='bx bx-menu'></i>
-            <img 
-              src="https://techpaathshala.com/assets/images/home/techpathshala_mobile_logo.svg" 
-              alt="Tech Pathshala Logo"
+    <>
+      <header id="admin-header">
+        <div id="tech-logo">
+          <FaBars className="hamburger" onClick={() => sidebarToggle()} />
+          <img src={techpaathshala} alt="techpaathsala" />
+        </div>
+
+        <div className="right-side-info">
+          <ul>
+            <li>Welcome,</li>
+            <li>Admin</li>
+            <img
+              id="popup"
+              onClick={() => popUpLogout()}
+              src={userimage}
+              alt="userimage"
             />
-            <div id="admin-logout-btn"></div>
-            <p id="welcome-admin">Welcome Anshika</p>
-          </div>
-        </nav>
+          </ul>
+        </div>
       </header>
-      <hr />
-    </div>
+    </>
   );
 }
 
