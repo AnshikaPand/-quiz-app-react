@@ -24,3 +24,16 @@ export const fetchUserTestRequest = () => ({
   export const addUserTestFailure = () => ({
     type: "ADD_USERTEST_FAILURE",
   });
+
+  export const updateUserTestRequest = (payload) => ({
+    type: "UPDATE_USERTEST_REQUEST",
+    payload,
+  });
+  export const updateUserTestSuccess = (payload) => ({
+    type: "UPDATE_USERTEST_SUCCESS",
+    payload,
+  });
+  export const updateUserTestFailure= () => ({
+    type: "UPDATE_USERTEST_FAILURE",
+    payload,
+  });
