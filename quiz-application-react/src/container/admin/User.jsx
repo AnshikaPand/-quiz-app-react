@@ -5,6 +5,7 @@ import SideBar from '../../components/SideBar'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUserTestRequest } from '../../store/userTest/userTestAction'
+import { Link } from 'react-router-dom'
 
 const User = () => {
     
@@ -43,8 +44,8 @@ const User = () => {
                                             <td>{user.fullName}</td>
                                             <td>{user.email}</td>
                                             <td>{user.totalScore}</td>
-                                            {/* <td>{user.tests.length}</td> */}
-                                            <td>{<Link to={`/testdetails/${index}`}>View More</Link>}</td>
+                                            <td>{user.tests.length}</td>
+                                            <td>{<Link to={`/userTestList/${index}`}>View More</Link>}</td>
                                         </tr>
                                     ))
                                 }
@@ -55,11 +56,7 @@ const User = () => {
                 </section>
             </div>
 
-            <div id="logout-container">
-                <p id="my-name">Hii, Admin</p>
-                <p id="my-email">admin007@gmail.com</p>
-                <button id="logout-button" onclick="logout()">Logout</button>
-            </div>
+           
     
    
     </>

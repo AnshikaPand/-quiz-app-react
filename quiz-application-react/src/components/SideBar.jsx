@@ -30,7 +30,7 @@ const SideBar = () => {
           </li>
           <li>
             <FaQuestion />
-            <Link className="quizzes" to="/QuizQuestion">Quizzes</Link> 
+            <Link className="quizzes" to="/Question">Quizzes</Link> 
           </li>
         </ul>
         <div className="admin-logout-btn">

@@ -35,13 +35,13 @@ const Leaderboard = () => {
     if (userInfo && sortedUsers.length > 0) {
       console.log("Sorted Users:", sortedUsers);
       const user = sortedUsers.find(
-        (user) => user.email === userInfo[0]?.email
+        (user) => user.email === userInfo.email
       );
       console.log(user);
       if (user) {
         const index =
           sortedUsers.findIndex(
-            (user) => user.email === userInfo[0]?.email
+            (user) => user.email === userInfo.email
           ) + 1;
         setUserIndex(index);
         console.log(index);
@@ -88,7 +88,7 @@ const Leaderboard = () => {
       <section id="score-board">
         {sortedUsers.slice(0, 3).map((user, index) => (
           <div
-            key={user.userInfo.email}
+            key={user.email}
             id={`${["first", "second", "third"][index]}-rank-container`}
           >
             <div className={`${["first", "second", "third"][index]}-rank`}>
@@ -105,7 +105,7 @@ const Leaderboard = () => {
                 <p>{user.totalScore}</p>
               </div>
               <div className="circle">
-                <p className="username">{user.userInfo.fullName}</p>
+                <p className="username">{user.fullName}</p>
               </div>
             </div>
           </div>
@@ -115,9 +115,9 @@ const Leaderboard = () => {
           <img src={Vector} alt="Vector Design" />
           <div className="ranking-board">
             {sortedUsers.slice(3, 6).map((user, index) => (
-              <div className="ranking" key={user.userInfo.email}>
+              <div className="ranking" key={user.email}>
                 <p className="user-name">
-                  <span>#{index + 4}</span> {user.userInfo.fullName}
+                  <span>#{index + 4}</span> {user.fullName}
                 </p>
                 <p className="user-score">{user.totalScore}</p>
               </div>

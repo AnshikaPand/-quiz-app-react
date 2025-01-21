@@ -1,15 +1,31 @@
 const initialState = {
-    questions: []
-  };
+  questions: [],
+};
 
-  const questionReducer =(state = initialState, action)=>{
-    switch(action.type){
-case "FETCH_QUESTION_SUCCESS":
-return{...state,questions:action.payload}
-case "ADD_QUESTION_SUCCESS":
-    return{...state,users:[...state.users,action.payload]}
-default:
-    return state;
-    }
+const questionReducer = (state = initialState, action) => {
+  console.log(action.type);
+  switch (action.type) {
+    case "FETCH_QUESTION_SUCCESS":
+      return { ...state, questions: action.payload };
+    case "ADD_QUESTION_SUCCESS":
+      return { ...state, questions: [...state.questions, action.payload] };
+    case "DELETE_QUESTION_SUCCESS":
+      console.log({ action });
+      return {
+        ...state,
+        questions: state.questions.filter(
+          (question) => question.id !== action.payload.id
+        ),
+      };
+    case "UPDATE_QUESTION_SUCCESS":
+      return {
+        ...state,
+        questions: state.questions.map((question) =>
+          question.id === action.payload.id ? action.payload : question
+        ),
+      };
+    default:
+      return state;
   }
-  export default questionReducer;
+};
+export default questionReducer;

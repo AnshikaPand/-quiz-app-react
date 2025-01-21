@@ -3,7 +3,11 @@ import teachpaathshala from "../../assets/techpaathshala.svg";
 import userimage from "../../assets/user_image.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestionRequest } from "../../store/questions/questionAction";
-import { addUserTestRequest } from "../../store/userTest/userTestAction";
+import {
+  addUserTestRequest,
+  fetchUserTestRequest,
+} from "../../store/userTest/userTestAction";
+import { updateUserTestRequest } from "../../store/userTest/userTestAction";
 import { useNavigate } from "react-router-dom";
 
 const QuizQuestion = () => {
@@ -17,6 +21,7 @@ const QuizQuestion = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const question = useSelector((state) => state.questions.questions);
+  const userTests = useSelector((state) => state.userTests.userTests);
 
   const userInfo = JSON.parse(localStorage.getItem("userLoggedIn"));
 
@@ -30,43 +35,59 @@ const QuizQuestion = () => {
   // Calculate and submit the score
   const calculateScore = () => {
     let totalScore = 0;
-    
+
     randomQuestion.forEach((question, index) => {
-      if ( selectedOptions[index] === question.answer) {
-        totalScore += 10; 
+      if (selectedOptions[index] === question.answer) {
+        totalScore += 10;
       }
-      return totalScore
+      return totalScore;
     });
-   // setScore(totalScore);
-    console.log('Final score:', totalScore); 
-  
+    // setScore(totalScore);
+    console.log("Final score:", totalScore);
+
     const endTime = Date.now();
-    const timeTaken = Math.round((endTime - startTime) / 1000); 
+    const timeTaken = Math.round((endTime - startTime) / 1000);
     const finalScore = totalScore;
-  
-    const confirmSubmission = window.confirm("Are you sure you want to submit?");
+
+    const confirmSubmission = window.confirm(
+      "Are you sure you want to submit?"
+    );
     if (confirmSubmission) {
       alert(
         `Quiz finished! Your final score is ${finalScore} out of ${
           randomQuestion.length * 10
         }. Time taken: ${timeTaken} seconds.`
       );
-      
-      // Dispatch action to save user test data
-      dispatch(
-        addUserTestRequest({
-          userInfo,
-          totalScore: finalScore,
-          randomQuestion,
-          selectedOptions,
-          timeTaken,
-        })
-      );
-  
-     navigate("/leaderbord");
+      const test = { totalScore, randomQuestion, selectedOptions, timeTaken };
+      let userInfo = JSON.parse(localStorage.getItem("userLoggedIn"));
+      const user = userTests.find((user) => userInfo.email === user.email);
+      console.log(user);
+
+      if (user) {
+        const updatedTests = [...user.tests, test];
+        console.log({ totalScore, tests: [updatedTests] });
+        dispatch(
+          updateUserTestRequest({
+            id: user.id,
+            fullName: userInfo.fullName,
+            email: userInfo.email,
+            totalScore,
+            tests: updatedTests,
+          })
+        );
+      } else {
+        dispatch(
+          addUserTestRequest({
+            fullName: userInfo.fullName,
+            email: userInfo.email,
+            totalScore: totalScore,
+            tests: [test],
+          })
+        );
+      }
+      navigate("/leaderbord");
     }
   };
-  
 
   // Progress bar logic
   const sliderTotal = 100;
@@ -75,6 +96,7 @@ const QuizQuestion = () => {
   // Fetch questions from Redux store
   useEffect(() => {
     dispatch(fetchQuestionRequest());
+    dispatch(fetchUserTestRequest());
   }, [dispatch]);
 
   // Shuffle questions and pick a subset
@@ -93,9 +115,8 @@ const QuizQuestion = () => {
     const updatedOptions = [...selectedOptions];
     updatedOptions[questionsIndex] = index;
     setSelectedOptions(updatedOptions);
-    console.log(`Selected option for question ${questionsIndex + 1}:`, index); 
+    console.log(`Selected option for question ${questionsIndex + 1}:`, index);
   };
-  
 
   const nextQuestion = () => {
     if (selectedOptions[questionsIndex] === undefined) {
@@ -119,10 +140,9 @@ const QuizQuestion = () => {
   const logout = () => {
     localStorage.removeItem("email");
     const confirmLogout = window.confirm("Are you sure you want to logout?");
-if(confirmLogout){
-  navigate("/")
-}    
-    
+    if (confirmLogout) {
+      navigate("/");
+    }
   };
 
   return (
@@ -149,7 +169,9 @@ if(confirmLogout){
       </header>
 
       <section id="question-answer">
-        <h1 id="question-number">{`Question ${questionsIndex + 1} of ${randomQuestion.length}`}</h1>
+        <h1 id="question-number">{`Question ${questionsIndex + 1} of ${
+          randomQuestion.length
+        }`}</h1>
         <div id="progressbar-container">
           <div
             id="progress-bar"
